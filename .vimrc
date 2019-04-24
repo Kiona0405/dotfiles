@@ -47,5 +47,6 @@ Plugin 'Yggdroot/indentLine'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-set list
-set listchars=tab:»-,trail:-,extends:»,precedes:«
+
+let g:indentLine_faster = 1
+
