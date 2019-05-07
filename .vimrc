@@ -23,6 +23,8 @@ if has('vim_starting')
     call neobundle#begin(expand('~/.vim/bundle/'))
     NeoBundle 'scrooloose/nerdtree'
     NeoBundle 'justmao945/vim-clang'
+    NeoBundle 'terryma/vim-multiple-cursors'
+    NeoBundle 'gioele/vim-autoswap'
     call neobundle#end()
 endif
 
