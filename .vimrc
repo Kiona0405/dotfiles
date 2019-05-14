@@ -25,7 +25,7 @@ if has('vim_starting')
     NeoBundle 'justmao945/vim-clang'
     NeoBundle 'terryma/vim-multiple-cursors'
     NeoBundle 'gioele/vim-autoswap'
-    NeoBundle 'scrooloose/nerdcommenter'
+    NeoBundle 'tomtom/tcomment_vim'
     call neobundle#end()
 endif
 
