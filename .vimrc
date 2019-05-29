@@ -50,6 +50,13 @@ Plugin 'Yggdroot/indentLine'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-
 let g:indentLine_faster = 1
 
+function WordCount()
+  let s:old_status = v:statusmsg
+  exe "silent normal g\<c-g>"
+  let s:word_count = str2nr(split(v:statusmsg)[11])
+  let v:statusmsg = s:old_status
+  return s:word_count
+endfunction
+set statusline=wc:%{WordCount()}
