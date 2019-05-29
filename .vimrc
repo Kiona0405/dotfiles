@@ -11,7 +11,9 @@ set smarttab
 set autoindent
 set wildmenu
 set nocompatible
-set statusline=wc:%{WordCount()}
+set statusline=
+set statusline+=%t
+set statusline+=\ word_count:%{WordCount()}
 
 let g:clang_c_options = '-std=gnu14'
 let g:clang_cpp_options = '-std=c++14 -stdlib=libc++'
