@@ -30,28 +30,20 @@ if has('vim_starting')
     NeoBundle 'gioele/vim-autoswap'
     NeoBundle 'tomtom/tcomment_vim'
     NeoBundle 'easymotion/vim-easymotion'
+    NeoBundle 'VundleVim/Vundle.vim'
+    NeoBundle 'tpope/vim-fugitive'
+    NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+    NeoBundle 'Yggdroot/indentLine'
     call neobundle#end()
 endif
 
-"insert here your Neobundle plugins"
-
 filetype plugin indent on
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
-
-
-
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'Yggdroot/indentLine'
-call vundle#end()            " required
 filetype plugin indent on    " required
 
 let g:indentLine_faster = 1
