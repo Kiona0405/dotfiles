@@ -15,6 +15,7 @@ set statusline=
 set statusline+=%t
 set statusline+=\ word_count:%{WordCount()}
 
+
 let g:clang_c_options = '-std=gnu14'
 let g:clang_cpp_options = '-std=c++14 -stdlib=libc++'
 
@@ -28,6 +29,7 @@ if has('vim_starting')
     NeoBundle 'terryma/vim-multiple-cursors'
     NeoBundle 'gioele/vim-autoswap'
     NeoBundle 'tomtom/tcomment_vim'
+    NeoBundle 'easymotion/vim-easymotion'
     call neobundle#end()
 endif
 
@@ -67,3 +69,20 @@ function! WordCount()
    call setpos('.', position)
    return s:word_count 
 endfunction
+
+
+" easy motion setting
+" <Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+" s{char}{char} to move to {char}{char}
+nmap s <Plug>(easymotion-overwin-f2)
+
+" Move to line
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
+
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
