@@ -1,4 +1,3 @@
-syntax on
 set number
 set backspace=indent,eol,start
 set clipboard=unnamed
@@ -12,13 +11,7 @@ set autoindent
 set wildmenu
 set nocompatible
 
-let g:clang_c_options = '-std=gnu14'
-let g:clang_cpp_options = '-std=c++14 -stdlib=libc++'
-
-" window size manager
-let g:winresizer_start_key = '<C-R>'
-
-filetype off
+filetype plugin indent on
 
 if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim
@@ -34,19 +27,23 @@ if has('vim_starting')
     NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
     NeoBundle 'Yggdroot/indentLine'
     NeoBundle 'simeji/winresizer'
+    NeoBundle 'JamshedVesuna/vim-markdown-preview'
     call neobundle#end()
 endif
 
-filetype plugin indent on
+" window size manager
+let g:winresizer_start_key = '<C-R>'
+
+" markdown preview
+let vim_markdown_preview_github=1
+let vim_markdown_preview_toggle=1
+let vim_markdown_preview_browser='Google Chrome'
+
+" nerd tree
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-filetype plugin indent on    " required
-
+" indent line
 let g:indentLine_faster = 1
 
 " easy motion setting
@@ -64,3 +61,5 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 " Move to word
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+syntax on
