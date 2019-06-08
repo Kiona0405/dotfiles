@@ -11,13 +11,12 @@ set smarttab
 set autoindent
 set wildmenu
 set nocompatible
-set statusline=
-set statusline+=%t
-set statusline+=\ word_count:%{WordCount()}
-
 
 let g:clang_c_options = '-std=gnu14'
 let g:clang_cpp_options = '-std=c++14 -stdlib=libc++'
+
+" window size manager
+let g:winresizer_start_key = '<C-R>'
 
 filetype off
 
@@ -34,6 +33,7 @@ if has('vim_starting')
     NeoBundle 'tpope/vim-fugitive'
     NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
     NeoBundle 'Yggdroot/indentLine'
+    NeoBundle 'simeji/winresizer'
     call neobundle#end()
 endif
 
@@ -47,21 +47,6 @@ filetype off                  " required
 filetype plugin indent on    " required
 
 let g:indentLine_faster = 1
-
-function! WordCount()
-   let s:old_status = v:statusmsg
-   let position = getpos(".")
-   exe ":silent normal g\<c-g>"
-   let stat = v:statusmsg
-   let s:word_count = 0
-   if stat != '--No lines in buffer--'
-     let s:word_count = str2nr(split(v:statusmsg)[11])
-     let v:statusmsg = s:old_status
-   end
-   call setpos('.', position)
-   return s:word_count 
-endfunction
-
 
 " easy motion setting
 " <Leader>f{char} to move to {char}
