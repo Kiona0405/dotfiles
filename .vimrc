@@ -39,6 +39,7 @@ endif
 
 filetype plugin indent on
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
