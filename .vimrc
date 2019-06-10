@@ -31,6 +31,9 @@ if has('vim_starting')
     call neobundle#end()
 endif
 
+" terminal
+tnoremap <Esc> <C-\><C-n>
+
 " window size manager
 let g:winresizer_start_key = '<C-R>'
 
