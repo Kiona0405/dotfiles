@@ -15,6 +15,8 @@ set tabstop=4
 set shiftwidth=4
 set display=lastline
 set pumheight=10
+set laststatus=2
+set statusline=[%n]\ %<%f%h%m
 
 nnoremap Y y$
 
