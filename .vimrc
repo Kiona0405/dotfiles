@@ -42,6 +42,7 @@ if dein#load_state('~/.cache/dein')
     call dein#add('simeji/winresizer')
     call dein#add('JamshedVesuna/vim-markdown-preview')
     call dein#add('scrooloose/nerdtree')
+    call dein#add('terryma/vim-multiple-cursors')
 
   if !has('nvim')
     call dein#add('roxma/nvim-yarp')
