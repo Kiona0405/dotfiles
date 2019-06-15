@@ -8,6 +8,8 @@ gitcmt () {
     message=$1
     git commit -m ${message}
 }
+alias dstamp='date +%Y%m%d'
+
 
 exe_cpp () {
     name=$1
