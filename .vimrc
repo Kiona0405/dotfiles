@@ -17,6 +17,7 @@ set display=lastline
 set pumheight=10
 set laststatus=2
 set statusline=[%n]\ %<%f%h%m
+set clipboard+=unnamedplus
 
 nnoremap Y y$
 
@@ -31,8 +32,10 @@ if dein#load_state('~/.cache/dein')
     call dein#begin('~/.cache/dein')
 
     call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
-    call dein#add('Shougo/deoplete.nvim')
-    call dein#add('justmao945/vim-clang')
+    " call dein#add('Shougo/deoplete.nvim')
+    " call dein#add('Shougo/neoinclude.vim')
+    " call dein#add('Shougo/deoplete-clangx')
+    " call dein#add('Shougo/neosnippet.vim')
     call dein#add('terryma/vim-multiple-cursors')
     call dein#add('tomtom/tcomment_vim')
     call dein#add('easymotion/vim-easymotion')
@@ -43,6 +46,7 @@ if dein#load_state('~/.cache/dein')
     call dein#add('JamshedVesuna/vim-markdown-preview')
     call dein#add('scrooloose/nerdtree')
     call dein#add('terryma/vim-multiple-cursors')
+    call dein#add('octol/vim-cpp-enhanced-highlight')
 
   if !has('nvim')
     call dein#add('roxma/nvim-yarp')
@@ -55,6 +59,29 @@ endif
 
 filetype plugin indent on
 syntax enable
+
+" deoplete
+" call deoplete#custom#var('clangx', 'clang_binary', '/usr/bin/clang')
+" let g:deoplete#enable_at_startup = 1
+" let g:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib'
+" call deoplete#custom#option('deoplete-options-auto_complete', v:true)
+" call deoplete#custom#var('clangx', 'clang_binary', '/usr/bin/clang')
+" call deoplete#custom#var('clangx', 'default_cpp_options', '-std=c++14')
+
+" "" Plugin key-mappings.
+" " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+" imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+" smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+" xmap <C-k>     <Plug>(neosnippet_expand_target)
+"
+" " SuperTab like snippets behavior.
+" " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+" imap <expr><TAB> pumvisible() ? "\<C-n>" : neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+" " <S-TAB>: completion back.
+" inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<C-h>"
+"
+" smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+" \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 " terminal
 tnoremap <Esc> <C-\><C-n>
