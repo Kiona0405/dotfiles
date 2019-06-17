@@ -1,5 +1,9 @@
 
-alias vim=nvim
+if [ -n "$ZSH_VERSION" ]; then
+    alias vim='nvim'
+else
+    alias vim='nvim -rcfile ~/.bash_profile'
+fi
 alias gita='git add'
 alias gitd='git diff'
 alias gitchk='git checkout'
@@ -28,3 +32,9 @@ function title {
     fi
 }
 title
+
+alerm () {
+    sleep_time=$1
+    audio=/Users/Naoki/Projects/diary/audio/old_school_bell.mp3
+    sleep $sleep_time; afplay $audio 
+}
