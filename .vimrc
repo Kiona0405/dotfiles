@@ -7,7 +7,6 @@ set smartindent
 set showmatch
 set laststatus=2
 set wildmode=list:longest
-set list listchars=tab:\▸\-
 set wrapscan
 set incsearch
 set expandtab
@@ -19,7 +18,6 @@ set laststatus=2
 set statusline=[%n]\ %<%f%h%m
 
 nnoremap Y y$
-
 
 if &compatible
     set nocompatible
