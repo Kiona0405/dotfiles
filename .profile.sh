@@ -1,9 +1,4 @@
-
-if [ -n "$ZSH_VERSION" ]; then
-    alias vim='nvim'
-else
-    alias vim='nvim -rcfile ~/.bash_profile'
-fi
+alias vim='nvim'
 alias gita='git add'
 alias gitd='git diff'
 alias gitchk='git checkout'
@@ -22,16 +17,13 @@ exe_cpp () {
 
 # iTerm2 tab titles
 export DISABLE_AUTO_TITLE="true"
+unset PROMPT_COMMAND
 function title {
     if [ "$1" ]
     then
-        export PROMPT_COMMAND='__bp_precmd_invoke_cmd'
         echo -ne "\033]0;${*}\007"
-    else
-        export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/\~}\007";__bp_precmd_invoke_cmd'
     fi
 }
-title
 
 alerm () {
     sleep_time=$1
