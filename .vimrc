@@ -45,6 +45,7 @@ if dein#load_state('~/.cache/dein')
     call dein#add('scrooloose/nerdtree')
     call dein#add('terryma/vim-multiple-cursors')
     call dein#add('octol/vim-cpp-enhanced-highlight')
+    call dein#add('itchyny/lightline.vim')
 
   if !has('nvim')
     call dein#add('roxma/nvim-yarp')
@@ -112,3 +113,10 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 " Move to word
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+let g:lightline = {
+  \     'active': {
+  \         'left': [['mode', 'paste' ], ['readonly', 'filename', 'modified']],
+  \         'right': [['lineinfo'], ['percent'], ['fileformat', 'fileencoding']]
+  \     }
+  \ }
