@@ -17,6 +17,9 @@ set pumheight=10
 set laststatus=2
 set statusline=[%n]\ %<%f%h%m
 set clipboard+=unnamedplus
+set tags=tags,.tags
+" change leader mapping
+let mapleader = ","
 
 nnoremap Y y$
 
@@ -46,6 +49,7 @@ if dein#load_state('~/.cache/dein')
     call dein#add('terryma/vim-multiple-cursors')
     call dein#add('octol/vim-cpp-enhanced-highlight')
     call dein#add('itchyny/lightline.vim')
+    call dein#add('davidhalter/jedi-vim')
 
   if !has('nvim')
     call dein#add('roxma/nvim-yarp')
