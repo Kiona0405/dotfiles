@@ -1,0 +1,63 @@
+#=============================================================================
+# basic.toml --- basic configuration example for SpaceVim
+# Copyright (c) 2016-2017 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg at 163.com >
+# URL: https://spacevim.org
+# License: GPLv3
+#=============================================================================
+
+# All SpaceVim option below [option] section
+[options]
+    # Disable guicolors in basic mode, many terminal do not support 24bit
+    # true colors
+    colorscheme = "jellybeans"
+    colorscheme_bg = "dark"
+
+    enable_guicolors = true 
+    # Disable statusline separator, if you want to use other value, please
+    # install nerd fonts
+    statusline_separator = "nil"
+    statusline_inactive_separator = "bar"
+
+    buffer_index_type = 4
+    windows_index_type = 3
+    enable_tabline_filetype_icon =true 
+    enable_statusline_mode =true 
+    statusline_unicode_symbols = true 
+    # Enable vim compatible mode, avoid changing origin vim key bindings
+    vimcompatible = true
+
+    # automatic update
+    automatic_update = true
+    
+    bootstrap_before = "myspacevim#after"
+
+# Enable autocomplete layer
+[[layers]]
+name = 'autocomplete'
+auto_completion_return_key_behavior = "complete"
+auto_completion_tab_key_behavior = "cycle"
+
+[[layers]]
+name = 'shell'
+default_position = 'bottom'
+default_height = 30
+
+# python configuration
+[[layers]]
+name = "lang#python"
+
+# fuzzy finder
+[[layers]]
+name = "denite"
+
+# color shceme
+[[layers]]
+name = "colorscheme"
+
+# plugin
+[[custom_plugins]]
+name = "ryanoasis/vim-devicons"
+name = "Shougo/vimproc.vim"
+name = "simeji/winresizer"
+
