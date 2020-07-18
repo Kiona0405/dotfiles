@@ -1,5 +1,5 @@
 function! myspacevim#after() abort
-  let mapleader=","
+  let g:mapleader = ","
   set timeoutlen=100
   let g:winresizer_start_key = '<C-T>'
 
