@@ -29,8 +29,12 @@
 
     # automatic update
     automatic_update = true
+
+    # tab setting
+    default_indent = 4
     
-    bootstrap_before = "myspacevim#after"
+    # read my own setting
+    bootstrap_after = "myspacevim#after"
 
 # Enable autocomplete layer
 [[layers]]
@@ -59,5 +63,4 @@ name = "colorscheme"
 [[custom_plugins]]
 name = "ryanoasis/vim-devicons"
 name = "Shougo/vimproc.vim"
-name = "simeji/winresizer"
 
