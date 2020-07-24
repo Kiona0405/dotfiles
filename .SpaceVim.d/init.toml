@@ -63,4 +63,5 @@ name = "colorscheme"
 [[custom_plugins]]
 name = "ryanoasis/vim-devicons"
 name = "Shougo/vimproc.vim"
+name = "tpope/vim-commentary"
 
