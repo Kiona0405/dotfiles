@@ -62,6 +62,10 @@ name = "denite"
 [[layers]]
 name = "colorscheme"
 
+[[layers]]
+name = 'git'
+git-plugin='fugitive'
+
 # plugin
 [[custom_plugins]]
 name = "ryanoasis/vim-devicons"
