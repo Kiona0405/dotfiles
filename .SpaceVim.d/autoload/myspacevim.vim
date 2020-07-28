@@ -1,7 +1,8 @@
 function! myspacevim#after() abort
-  let g:mapleader = ","
   set timeoutlen=100
   set wrap
+  set diffopt=vertical
+  let g:mapleader = ","
   let g:winresizer_start_key = '<C-T>'
   let g:vimfiler_ignore_pattern = ''
 
