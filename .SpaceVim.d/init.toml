@@ -72,4 +72,4 @@ name = "ryanoasis/vim-devicons"
 name = "Shougo/vimproc.vim"
 name = "tpope/vim-commentary"
 name = "terryma/vim-multiple-cursors"
-
+name = 'kien/ctrlp.vim'

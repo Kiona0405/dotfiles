@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/Users/Naoki/Projects/atcoder/beginner'
+let g:netrw_dirhist_4='/Users/Naoki/Projects/atcoder/beginner/beginner_184'
 let g:netrw_dirhist_3='/Users/Naoki/github/scikit-learn/examples/gaussian_process'
 let g:netrw_dirhist_2='/Users/Naoki'
 let g:netrw_dirhist_1='/Users/Naoki/github/scikit-learn/sklearn'
@@ -8,5 +10,3 @@ let g:netrw_dirhist_9='/Users/Naoki/github/scikit-learn/sklearn'
 let g:netrw_dirhist_8='/Users/Naoki/.SpaceVim.d'
 let g:netrw_dirhist_7='/Users/Naoki/github/scikit-learn'
 let g:netrw_dirhist_6='/Users/Naoki/github/scikit-learn/examples/gaussian_process'
-let g:netrw_dirhist_5='/Users/Naoki/github/scikit-learn'
-let g:netrw_dirhist_4='/Users/Naoki/github/scikit-learn/examples/gaussian_process'
