@@ -1,15 +1,57 @@
+"####
+" general setting
+" ####
+syntax enable
+" <leader> is <space>
+let mapleader = " "
+" ###
+" mappings
+" ###
+"remove default for training
+inoremap <esc> <nop>
+nnoremap $ <nop>
+nnoremap 0 <nop>
+" mode change
+inoremap jk <esc>
+" delete line
+noremap <s-d> dd
+" make word uppercase
+noremap <c-h> <c-v>iw<s-U>
+" move cursor 
+noremap K 10k
+noremap J 10j
+noremap A 0
+noremap E $
+noremap L 10l
+noremap H 10h
+" move window
+noremap <leader>k <c-w>k
+noremap <leader>j <c-w>j
+noremap <leader>l <c-w>l
+noremap <leader>h <c-w>h
+" close window 
+noremap <leader>q :q<Enter> :echo 'quit'<Enter>
+noremap <leader>w :w<Enter> :echo 'save'<Enter>
+" split window
+noremap <Leader>sp :sp<Enter>
+noremap <Leader>vs :vs<Enter>
+" vimrc
+nnoremap <Leader>ev :vs $MYVIMRC<cr>
+nnoremap <Leader>sv :source $MYVIMRC<cr>
+" operator pending mapping
+onoremap il( :<c-u>normal! F)vi(<cr>
+onoremap in( :<c-u>normal! f(vi(<cr>
+" clipboard
+vnoremap <Leader>c "*y
+
+
 call plug#begin('~/.vim/plugged')
+    Plug 'Kiona0405/infocus'
     " ####
     " completion
     " ####
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    inoremap ( ()<Esc>i
-    inoremap { {}<Esc>i
-    inoremap {<CR> {<CR>}<Esc>O
-    inoremap [ []<Esc>i
-    inoremap ' ''<Esc>i
-    inoremap " ""<Esc>i
-    
+    Plug 'jiangmiao/auto-pairs'
 
     " ###
     " File
@@ -44,10 +86,11 @@ syntax on
 colorscheme iceberg
 
 " ####
-" vertival split column
+" column
 " ####
 set signcolumn=yes:1
 set number relativenumber
+set numberwidth=2
 
 " ####
 " indent
@@ -107,3 +150,11 @@ let g:coc_global_extensions = ['coc-json', 'coc-python', 'coc-git', 'coc-clangd'
 " winresize
 " ###
 let g:winresizer_start_key = '<C-q>'
+
+" ###
+" gitgutter(diff column)
+" ###
+let g:gitgutter_map_keys = 0
+nmap ghs <Plug>(GitGutterStageHunk)
+nmap ghu <Plug>(GitGutterUndoHunk)
+nmap ghs <Plug>(GitGutterStageHunk)
