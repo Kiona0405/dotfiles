@@ -70,9 +70,11 @@ call plug#begin('~/.vim/plugged')
     Plug 'ryanoasis/vim-devicons'
 
     " ###
-    " window resize
+    " UI
     " ### 
     Plug 'simeji/winresizer'
+    Plug 'christoomey/vim-tmux-runner'
+    Plug 'tpope/vim-commentary'
 call plug#end()
 
 " ######
@@ -158,3 +160,12 @@ let g:gitgutter_map_keys = 0
 nmap ghs <Plug>(GitGutterStageHunk)
 nmap ghu <Plug>(GitGutterUndoHunk)
 nmap ghs <Plug>(GitGutterStageHunk)
+
+" ###
+" vim-tmux-runner
+" ###
+let g:VtrStripLeadingWhitespace = 0
+let g:VtrClearEmptyLines = 0
+let g:VtrAppendNewline = 1
+nnoremap <leader>vo :VtrOpenRunner<Enter>
+nnoremap <leader>vf :VtrFocusRunner<Enter>
