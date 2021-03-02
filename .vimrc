@@ -2,8 +2,8 @@
 " general setting
 " ####
 syntax enable
-" <leader> is <space>
-let mapleader = " "
+let mapleader = "\<space>"
+let maplocalleader=","
 " ###
 " mappings
 " ###
@@ -14,9 +14,7 @@ nnoremap 0 <nop>
 " mode change
 inoremap jk <esc>
 " delete line
-noremap <s-d> dd
-" make word uppercase
-noremap <c-h> <c-v>iw<s-U>
+noremap <leader>d dd
 " move cursor 
 noremap K 10k
 noremap J 10j
@@ -38,9 +36,6 @@ noremap <Leader>vs :vs<Enter>
 " vimrc
 nnoremap <Leader>ev :vs $MYVIMRC<cr>
 nnoremap <Leader>sv :source $MYVIMRC<cr>
-" operator pending mapping
-onoremap il( :<c-u>normal! F)vi(<cr>
-onoremap in( :<c-u>normal! f(vi(<cr>
 " clipboard
 vnoremap <Leader>c "*y
 
@@ -138,7 +133,7 @@ let g:airline_symbols.dirty='⚡'
 " ##########
 " nerd tree
 " ##########
-nnoremap <silent><C-t> :NERDTreeToggle<CR>
+nnoremap <silent><leader>t :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 let NERDTreeHijackNetrw=1
 
@@ -151,7 +146,7 @@ let g:coc_global_extensions = ['coc-json', 'coc-python', 'coc-git', 'coc-clangd'
 " ###
 " winresize
 " ###
-let g:winresizer_start_key = '<C-q>'
+let g:winresizer_start_key = '<leader>r'
 
 " ###
 " gitgutter(diff column)
