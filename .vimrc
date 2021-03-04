@@ -2,6 +2,7 @@
 " general setting
 " ####
 syntax enable
+set imdisable
 let mapleader = "\<space>"
 let maplocalleader=","
 " ###
@@ -162,5 +163,8 @@ nmap ghs <Plug>(GitGutterStageHunk)
 let g:VtrStripLeadingWhitespace = 0
 let g:VtrClearEmptyLines = 0
 let g:VtrAppendNewline = 1
-nnoremap <leader>vo :VtrOpenRunner<Enter>
-nnoremap <leader>vf :VtrFocusRunner<Enter>
+nnoremap <leader>mo :VtrOpenRunner<Enter>
+nnoremap <leader>mf :VtrFocusRunner<Enter>
+nnoremap <leader>ma :VtrAttachToPane<Enter>
+nnoremap <leader>mk :VtrKillRunner<Enter>
+nnoremap <leader>mr :VtrSendCommandToRunner !!<space><Enter>
