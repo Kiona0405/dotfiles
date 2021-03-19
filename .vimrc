@@ -60,6 +60,8 @@ call plug#begin('~/.vim/plugged')
     " ###
     " Plug 'joshdick/onedark.vim'
     " Plug 'jmoggee/mirage.vim'
+    Plug 'altercation/vim-colors-solarized'
+    Plug 'rodnaph/vim-color-schemes'
     Plug 'cocopon/iceberg.vim'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
@@ -81,6 +83,7 @@ let g:onedark_hide_endofbuffer=1
 let g:onedark_termcolors=256
 let g:onedark_terminal_italics=1
 syntax on
+set background=dark
 colorscheme iceberg
 
 " ####
@@ -142,7 +145,7 @@ let NERDTreeHijackNetrw=1
 " ##########
 " coc
 " ##########
-let g:coc_global_extensions = ['coc-json', 'coc-python', 'coc-git', 'coc-clangd', 'coc-yaml', 'coc-highlight', 'coc-html', 'coc-sh']
+let g:coc_global_extensions = ['coc-json', 'coc-pyright', 'coc-git', 'coc-clangd', 'coc-yaml', 'coc-highlight', 'coc-html', 'coc-sh']
 
 " ###
 " winresize
