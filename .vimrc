@@ -47,6 +47,7 @@ call plug#begin('~/.vim/plugged')
     " completion
     " ####
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'davidhalter/jedi-vima'
     Plug 'jiangmiao/auto-pairs'
 
     " ###
