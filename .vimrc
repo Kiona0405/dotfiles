@@ -91,7 +91,6 @@ colorscheme iceberg
 " ####
 " column
 " ####
-set signcolumn=yes:1
 set number relativenumber
 set numberwidth=2
 
@@ -158,7 +157,7 @@ let g:jedi#use_tabs_not_buffers = 1
 " ###
 " winresize
 " ###
-let g:winresizer_start_key = '<leader>r'
+let g:winresizer_start_key = '<leader>rr'
 
 " ###
 " gitgutter(diff column)
