@@ -46,9 +46,10 @@ call plug#begin('~/.vim/plugged')
     " ####
     " completion
     " ####
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'davidhalter/jedi-vima'
+    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'davidhalter/jedi-vim'
     Plug 'jiangmiao/auto-pairs'
+    Plug 'andviro/flake8-vim'
 
     " ###
     " File
@@ -146,7 +147,13 @@ let NERDTreeHijackNetrw=1
 " ##########
 " coc
 " ##########
-let g:coc_global_extensions = ['coc-json', 'coc-pyright', 'coc-git', 'coc-clangd', 'coc-yaml', 'coc-highlight', 'coc-html', 'coc-sh']
+" let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-clangd', 'coc-yaml', 'coc-highlight', 'coc-html', 'coc-sh', 'coc-jedi']
+"
+
+" ###
+" jedi-vim
+" ###
+let g:jedi#use_tabs_not_buffers = 1
 
 " ###
 " winresize
