@@ -91,7 +91,6 @@ colorscheme iceberg
 " ####
 " column
 " ####
-set signcolumn=yes:1
 set number relativenumber
 set numberwidth=2
 
