@@ -50,12 +50,16 @@ call plug#begin('~/.vim/plugged')
     Plug 'davidhalter/jedi-vim'
     Plug 'jiangmiao/auto-pairs'
     Plug 'andviro/flake8-vim'
+    Plug 'ycm-core/YouCompleteMe'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
 
     " ###
     " File
     " ###
     Plug 'preservim/nerdtree'
     Plug 'airblade/vim-gitgutter'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
     " ###
     " color/style
@@ -182,4 +186,23 @@ nnoremap <leader>mo :VtrOpenRunner<Enter>
 nnoremap <leader>mf :VtrFocusRunner<Enter>
 nnoremap <leader>ma :VtrAttachToPane<Enter>
 nnoremap <leader>mk :VtrKillRunner<Enter>
-nnoremap <leader>mr :VtrSendCommandToRunner !!<space><Enter>
+nnoremap <leader>mr :VtrSendCommandToRunner !!<Enter>
+
+" ###
+" Makefile
+" ###
+if expand("%:r") == 'Makefile'
+  set noexpandtab
+endif
+
+" ###
+" ctags
+" ###
+nnoremap <leader>jd <c-]>
+nnoremap <leader>jb <c-o>
+nnoremap <leader>jn <c-i>
+
+" ###
+" fzf
+" ###
+nnoremap <leader>o :FZF<Enter>
