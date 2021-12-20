@@ -53,6 +53,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'ycm-core/YouCompleteMe'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
+    Plug 'JuliaEditorSupport/julia-vim'
 
     " ###
     " File
@@ -162,11 +163,15 @@ let g:jedi#use_tabs_not_buffers = 1
 " flake8-vim
 " ###
 let g:PyFlakeCheckers = 'pep8,flake8'
+let g:PyFlakeDisabledMessages = 'E402'
+nnoremap <leader>pd PyFlakeToggle
+
+
 
 " ###
 " winresize
 " ###
-let g:winresizer_start_key = '<leader>r'
+let g:winresizer_start_key = '<leader>rw'
 
 " ###
 " gitgutter(diff column)
@@ -186,7 +191,8 @@ nnoremap <leader>mo :VtrOpenRunner<Enter>
 nnoremap <leader>mf :VtrFocusRunner<Enter>
 nnoremap <leader>ma :VtrAttachToPane<Enter>
 nnoremap <leader>mk :VtrKillRunner<Enter>
-nnoremap <leader>mr :VtrSendCommandToRunner !!<Enter>
+nnoremap <leader>mr :VtrSendCommandToRunner !! <Enter>
+" nnoremap <leader>mr :VtrSendCommandToRunner ls
 
 " ###
 " Makefile
