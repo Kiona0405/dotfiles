@@ -65,14 +65,13 @@ call plug#begin('~/.vim/plugged')
     " ###
     " color/style
     " ###
-    " Plug 'joshdick/onedark.vim'
-    " Plug 'jmoggee/mirage.vim'
-    Plug 'altercation/vim-colors-solarized'
     Plug 'rodnaph/vim-color-schemes'
-    Plug 'cocopon/iceberg.vim'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'ryanoasis/vim-devicons'
+    Plug 'cocopon/iceberg.vim'
+    Plug 'joshdick/onedark.vim'
+    Plug 'altercation/vim-colors-solarized'
 
     " ###
     " UI
@@ -86,9 +85,9 @@ call plug#end()
 " color scheme
 " ######
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-let g:onedark_hide_endofbuffer=1
-let g:onedark_termcolors=256
-let g:onedark_terminal_italics=1
+" let g:onedark_hide_endofbuffer=1
+" let g:onedark_termcolors=256
+" let g:onedark_terminal_italics=1
 syntax on
 set background=dark
 colorscheme iceberg
