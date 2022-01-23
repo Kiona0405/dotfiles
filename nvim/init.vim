@@ -5,11 +5,19 @@ syntax enable
 set imdisable
 let mapleader = "\<space>"
 let maplocalleader=","
+set tags+=~/.vim/systags
+set foldmethod=indent
+
+set encoding=UTF-8
+set fileencoding=UTF-8
+set termencoding=UTF-8
+set fileencodings=ucs-bom,utf-8,default
 " ###
 " mappings
 " ###
+nnoremap * *``
 "remove default for training
-source ./cscope_maps.vim
+inoremap <esc> <nop>
 nnoremap $ <nop>
 nnoremap 0 <nop>
 " mode change
@@ -113,7 +121,7 @@ set expandtab
 
 nmap <C-p> <Plug>AirlineSelectPrevTab
 nmap <C-n> <Plug>AirlineSelectNextTab
-set encoding=UTF-8
+
 set t_Co=256
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='iceberg'
@@ -212,19 +220,3 @@ nnoremap <leader>jn <c-i>
 " fzf
 " ###
 nnoremap <leader>o :FZF<Enter>
-
-" ###
-" cscope
-" ###
-if has("cscope")
-    set csprg=/usr/local/bin/cscope
-    set csto=0
-    set cst
-    " add any database in current directory
-    if filereadable("cscope.out")
-        silent cs add cscope.out
-    " else add database pointed to by environment
-    elseif $CSCOPE_DB != ""
-        silent cs add $CSCOPE_DB
-    endif
-endif
