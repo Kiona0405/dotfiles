@@ -5,9 +5,17 @@ syntax enable
 set imdisable
 let mapleader = "\<space>"
 let maplocalleader=","
+set tags+=~/.vim/systags
+set foldmethod=indent
+
+set encoding=UTF-8
+set fileencoding=UTF-8
+set termencoding=UTF-8
+set fileencodings=ucs-bom,utf-8,default
 " ###
 " mappings
 " ###
+nnoremap * *``
 "remove default for training
 inoremap <esc> <nop>
 nnoremap $ <nop>
@@ -112,7 +120,7 @@ set expandtab
 
 nmap <C-p> <Plug>AirlineSelectPrevTab
 nmap <C-n> <Plug>AirlineSelectNextTab
-set encoding=UTF-8
+
 set t_Co=256
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='iceberg'
