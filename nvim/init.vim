@@ -37,6 +37,7 @@ noremap <leader>j <c-w>j
 noremap <leader>l <c-w>l
 noremap <leader>h <c-w>h
 " close window 
+noremap <leader>z :only<Enter>
 noremap <leader>q :q<Enter> :echo 'quit'<Enter>
 noremap <leader>w :w<Enter> :echo 'save'<Enter>
 " split window
@@ -151,9 +152,19 @@ let g:airline_symbols.dirty='⚡'
 " ##########
 " nerd tree
 " ##########
-nnoremap <silent><leader>t :NERDTreeToggle<CR>
+" Start NERDTree when Vim is started without file arguments.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+" Start NERDTree when Vim starts with a directory argument.
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |
+            \ execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
+nnoremap <silent><leader>to :NERDTree<CR>
+nnoremap <silent><leader>tc :NERDTreeClose<CR>
+nnoremap <silent><leader>tf :NERDTreeFocus<CR>
 let NERDTreeShowHidden=1
 let NERDTreeHijackNetrw=1
+let g:NERDTreeWinSize=20
+let g:netrw_menu=0
 
 
 " ##########
@@ -173,8 +184,6 @@ let g:jedi#use_tabs_not_buffers = 1
 let g:PyFlakeCheckers = 'pep8,flake8'
 let g:PyFlakeDisabledMessages = 'E402'
 nnoremap <leader>pd PyFlakeToggle
-
-
 
 " ###
 " winresize
