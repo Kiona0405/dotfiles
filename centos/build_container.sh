@@ -8,5 +8,6 @@ source env.sh
 
 docker run\
     -itd\
+    --restart=always\
     --name=$CONTAINER\
     $IMAGE

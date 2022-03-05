@@ -68,3 +68,4 @@ RUN cd ~/.vim/plugged/YouCompleteMe\
 RUN sudo rm -rf /var/lib/apt/lists/* \
     && sudo localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
 ENV LANG en_US.utf8
+ENV TERM=screen-256color

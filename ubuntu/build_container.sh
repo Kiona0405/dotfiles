@@ -8,5 +8,7 @@ source env.sh
 
 docker run\
     -itd\
+    --restart=always\
     --name=$CONTAINER\
+    -v /Users/nao/project/ubuntu:/home/naoki/workspace\
     $IMAGE
