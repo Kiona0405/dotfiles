@@ -219,3 +219,9 @@ nnoremap <leader>jn <c-i>
 " fzf
 " ###
 nnoremap <leader>o :FZF<Enter>
+
+" ###
+" digdag's config file
+" ###
+autocmd BufNewFile,BufRead *.dig set filetype=yaml
+autocmd Syntax yaml setl indentkeys-=<:> indentkeys-=0#
