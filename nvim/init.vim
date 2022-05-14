@@ -43,6 +43,9 @@ noremap <leader>w :w<Enter> :echo 'save'<Enter>
 " split window
 noremap <Leader>sp :sp<Enter>
 noremap <Leader>vs :vs<Enter>
+" open as new tab/ close
+noremap <Leader>op :tab split<Enter>
+noremap <Leader>cl :tabclose<Enter>
 " vimrc
 nnoremap <Leader>ev :vs $MYVIMRC<cr>
 nnoremap <Leader>sv :source $MYVIMRC<cr>
@@ -55,7 +58,7 @@ call plug#begin('~/.vim/plugged')
     " ####
     " completion
     " ####
-    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'davidhalter/jedi-vim'
     Plug 'jiangmiao/auto-pairs'
     Plug 'andviro/flake8-vim'
@@ -81,6 +84,11 @@ call plug#begin('~/.vim/plugged')
     Plug 'cocopon/iceberg.vim'
     Plug 'joshdick/onedark.vim'
     Plug 'altercation/vim-colors-solarized'
+
+    " ###
+    " debug
+    " ###
+    Plug 'puremourning/vimspector'
 
     " ###
     " UI
@@ -169,8 +177,7 @@ let g:netrw_menu=0
 " ##########
 " coc
 " ##########
-" let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-clangd', 'coc-yaml', 'coc-highlight', 'coc-html', 'coc-sh', 'coc-jedi']
-"
+let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-clangd', 'coc-yaml', 'coc-highlight', 'coc-html', 'coc-sh', 'coc-java']
 
 " ###
 " jedi-vim
@@ -227,10 +234,15 @@ nnoremap <leader>jn <c-i>
 " ###
 " fzf
 " ###
-nnoremap <leader>o :FZF<Enter>
+nnoremap <leader>of :FZF<Enter>
 
 " ###
 " digdag's config file
 " ###
 autocmd BufNewFile,BufRead *.dig set filetype=yaml
 autocmd Syntax yaml setl indentkeys-=<:> indentkeys-=0#
+
+" ###
+" vimspector
+" ###
+let g:vimspector_enable_mappings='HUMAN'
