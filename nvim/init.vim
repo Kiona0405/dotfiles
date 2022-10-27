@@ -62,10 +62,11 @@ call plug#begin('~/.vim/plugged')
     Plug 'davidhalter/jedi-vim'
     Plug 'jiangmiao/auto-pairs'
     Plug 'andviro/flake8-vim'
+    Plug 'pangloss/vim-javascript'
     Plug 'ycm-core/YouCompleteMe'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
-    Plug 'JuliaEditorSupport/julia-vim'
+    " Plug 'JuliaEditorSupport/julia-vim'
 
     " ###
     " File
@@ -177,7 +178,8 @@ let g:netrw_menu=0
 " ##########
 " coc
 " ##########
-let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-clangd', 'coc-yaml', 'coc-highlight', 'coc-html', 'coc-sh', 'coc-java']
+" let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-clangd', 'coc-yaml', 'coc-highlight', 'coc-html', 'coc-sh', 'coc-java']
+let g:coc_global_extensions = ['coc-clangd', 'coc-java']
 
 " ###
 " jedi-vim
