@@ -12,6 +12,9 @@ set encoding=UTF-8
 set fileencoding=UTF-8
 set termencoding=UTF-8
 set fileencodings=ucs-bom,utf-8,default
+set cmdheight=1
+let g:python_host_prog = system('echo -n $(which python2)')
+let g:python3_host_prog = system('echo -n $(which python3)')
 " ###
 " mappings
 " ###
@@ -62,8 +65,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'davidhalter/jedi-vim'
     Plug 'jiangmiao/auto-pairs'
     Plug 'andviro/flake8-vim'
-    Plug 'pangloss/vim-javascript'
-    Plug 'ycm-core/YouCompleteMe'
+    " Plug 'ycm-core/YouCompleteMe'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     " Plug 'JuliaEditorSupport/julia-vim'
@@ -89,7 +91,7 @@ call plug#begin('~/.vim/plugged')
     " ###
     " debug
     " ###
-    Plug 'puremourning/vimspector'
+    " Plug 'puremourning/vimspector'
 
     " ###
     " UI
