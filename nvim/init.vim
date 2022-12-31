@@ -19,10 +19,6 @@ let g:python3_host_prog = system('echo -n $(which python3)')
 " mappings
 " ###
 nnoremap * *``
-"remove default for training
-inoremap <esc> <nop>
-nnoremap $ <nop>
-nnoremap 0 <nop>
 " mode change
 inoremap jk <esc>
 " delete line
@@ -62,7 +58,6 @@ call plug#begin('~/.vim/plugged')
     " completion
     " ####
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'davidhalter/jedi-vim'
     Plug 'jiangmiao/auto-pairs'
     Plug 'andviro/flake8-vim'
     " Plug 'ycm-core/YouCompleteMe'
@@ -181,12 +176,7 @@ let g:netrw_menu=0
 " coc
 " ##########
 " let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-clangd', 'coc-yaml', 'coc-highlight', 'coc-html', 'coc-sh', 'coc-java']
-let g:coc_global_extensions = ['coc-clangd', 'coc-java']
-
-" ###
-" jedi-vim
-" ###
-let g:jedi#use_tabs_not_buffers = 1
+let g:coc_global_extensions = ['coc-clangd', 'coc-java', 'coc-go', 'coc-jedi']
 
 " ###
 " flake8-vim
