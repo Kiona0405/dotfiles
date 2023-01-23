@@ -15,6 +15,11 @@ set fileencodings=ucs-bom,utf-8,default
 set cmdheight=1
 let g:python_host_prog = system('echo -n $(which python2)')
 let g:python3_host_prog = system('echo -n $(which python3)')
+
+"###
+" lua
+"###
+lua require('init')
 " ###
 " mappings
 " ###
@@ -53,17 +58,19 @@ vnoremap <Leader>c "*y
 
 
 call plug#begin('~/.vim/plugged')
-    Plug 'Kiona0405/infocus'
     " ####
     " completion
     " ####
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'neovim/nvim-lspconfig'
     Plug 'jiangmiao/auto-pairs'
     Plug 'andviro/flake8-vim'
-    " Plug 'ycm-core/YouCompleteMe'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
-    " Plug 'JuliaEditorSupport/julia-vim'
+
+    Plug 'neovim/nvim-lspconfig' " Collection of configurations for built-in LSP client
+    Plug 'hrsh7th/nvim-cmp' " Autocompletion plugin
+    Plug 'hrsh7th/cmp-nvim-lsp' " LSP source for nvim-cmp
+    Plug 'hrsh7th/cmp-cmdline'
 
     " ###
     " File
@@ -170,13 +177,6 @@ let NERDTreeShowHidden=1
 let NERDTreeHijackNetrw=1
 let g:NERDTreeWinSize=20
 let g:netrw_menu=0
-
-
-" ##########
-" coc
-" ##########
-" let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-clangd', 'coc-yaml', 'coc-highlight', 'coc-html', 'coc-sh', 'coc-java']
-let g:coc_global_extensions = ['coc-clangd', 'coc-java', 'coc-go', 'coc-jedi']
 
 " ###
 " flake8-vim
