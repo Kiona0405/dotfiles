@@ -16,10 +16,6 @@ set cmdheight=1
 let g:python_host_prog = system('echo -n $(which python2)')
 let g:python3_host_prog = system('echo -n $(which python3)')
 
-"###
-" lua
-"###
-lua require('init')
 " ###
 " mappings
 " ###
@@ -102,6 +98,11 @@ call plug#begin('~/.vim/plugged')
     Plug 'christoomey/vim-tmux-runner'
     Plug 'tpope/vim-commentary'
 call plug#end()
+
+"###
+" lua
+"###
+lua require('init')
 
 " ######
 " color scheme
